@@ -23,7 +23,6 @@ const Login = () => {
         email: values.email.toLowerCase(),
         password: values.password,
       });
-      console.log(values, 'values');
     },
   });
 

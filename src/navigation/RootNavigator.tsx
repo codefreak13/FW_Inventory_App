@@ -21,7 +21,6 @@ const RootNavigator: React.FC = () => {
     const bootstrapAsync = async () => {
       try {
         const loggedInUser = await AsyncStorage.getItem('USER_LOGGED_IN');
-        console.log(loggedInUser, 'loggedInUser');
         loggedInUser && persistLoggedInUser();
       } catch (e) {}
     };

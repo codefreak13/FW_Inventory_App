@@ -1,6 +1,6 @@
 import React, {ReactNode} from 'react';
-import {StyleSheet, ViewStyle, Pressable, TextStyle} from 'react-native';
-import {MediumText} from './Text';
+import {ViewStyle, Pressable, TextStyle} from 'react-native';
+import {BoldText} from './Text';
 
 type ButtonProps = {
   customstyle?: ViewStyle;
@@ -27,12 +27,12 @@ const Button = (Props: ButtonProps) => {
   return (
     <Pressable
       testID={testID}
-      style={[styles.button, customstyle]}
+      style={customstyle}
       onPress={onPress}
       disabled={disabled}
       {...rest}>
       {!!title ? (
-        <MediumText customstyle={textStyle}>{title}</MediumText>
+        <BoldText customstyle={textStyle}>{title}</BoldText>
       ) : (
         children
       )}
@@ -41,7 +41,3 @@ const Button = (Props: ButtonProps) => {
 };
 
 export default Button;
-
-const styles = StyleSheet.create({
-  button: {},
-});
