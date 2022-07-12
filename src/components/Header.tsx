@@ -57,7 +57,9 @@ const Header = (props: HeaderProps) => {
       {customMiddleIcon && (
         <View style={styles.customMiddleIcon}>
           {title ? (
-            <BoldText customstyle={middleIconStyle}>{title}</BoldText>
+            <BoldText customstyle={{...styles.customStyle, ...middleIconStyle}}>
+              {title}
+            </BoldText>
           ) : (
             customMiddleIcon
           )}
@@ -121,5 +123,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 15,
     alignItems: 'flex-end',
+  },
+  customStyle: {
+    color: COLORS.Black,
   },
 });

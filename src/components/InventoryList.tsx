@@ -23,7 +23,7 @@ const InventoryList = (props: InventoryListProps) => {
         showsVerticalScrollIndicator={false}
         ListEmptyComponent={
           <View style={styles.emptyListStyle}>
-            <BoldText customstyle={styles.emptyText}>No Inventory</BoldText>
+            <BoldText customstyle={styles.textStyle}>No Inventory</BoldText>
           </View>
         }
         ListHeaderComponent={
@@ -33,11 +33,15 @@ const InventoryList = (props: InventoryListProps) => {
                 title={`Price(\u20A6)`}
                 customMiddleIcon
                 leftButton={{
-                  child: <BoldText>Name</BoldText>,
+                  child: (
+                    <BoldText customstyle={styles.textStyle}>Name</BoldText>
+                  ),
                   onclick: () => null,
                 }}
                 rightButton={{
-                  child: <BoldText>Total</BoldText>,
+                  child: (
+                    <BoldText customstyle={styles.textStyle}>Total</BoldText>
+                  ),
                   onclick: () => null,
                 }}
               />
@@ -61,7 +65,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: hp(250),
   },
-  emptyText: {
+  textStyle: {
     color: COLORS.Black,
   },
 });
