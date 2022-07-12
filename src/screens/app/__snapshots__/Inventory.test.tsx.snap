@@ -20,24 +20,3 @@ exports[`Inventory renders Inventory correctly 1`] = `
   />
 </View>
 `;
-
-exports[`Inventory renders correctly 1`] = `
-<View
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": 0,
-      "justifyContent": "center",
-      "left": 0,
-      "position": "absolute",
-      "right": 0,
-      "top": 0,
-    }
-  }
->
-  <ActivityIndicator
-    color="#1D1F20"
-    size="large"
-  />
-</View>
-`;
