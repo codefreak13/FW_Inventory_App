@@ -237,19 +237,15 @@ exports[`EditInventoryItem renders EditInventoryItem correctly 1`] = `
                   <View
                     style={
                       Object {
-                        "alignContent": "center",
                         "alignItems": "center",
-                        "backgroundColor": "#00000000",
-                        "borderColor": "#49658c",
-                        "borderRadius": 12,
-                        "borderWidth": 2,
-                        "color": "#49658c",
+                        "backgroundColor": "#FFF",
+                        "borderColor": "#1D1F20",
+                        "borderRadius": 13,
+                        "borderWidth": 1,
                         "flex": 1,
                         "flexDirection": "row",
-                        "justifyContent": "center",
-                        "paddingBottom": 10,
-                        "paddingHorizontal": 11,
-                        "paddingTop": 10,
+                        "marginTop": 82,
+                        "minHeight": 82,
                         "zIndex": 993,
                       }
                     }
@@ -288,7 +284,9 @@ exports[`EditInventoryItem renders EditInventoryItem correctly 1`] = `
                             },
                           ]
                         }
-                      />
+                      >
+                        Name
+                      </Text>
                       <TextInput
                         onBlur={[Function]}
                         onChangeText={[Function]}
@@ -331,19 +329,15 @@ exports[`EditInventoryItem renders EditInventoryItem correctly 1`] = `
                   <View
                     style={
                       Object {
-                        "alignContent": "center",
                         "alignItems": "center",
-                        "backgroundColor": "#00000000",
-                        "borderColor": "#49658c",
-                        "borderRadius": 12,
-                        "borderWidth": 2,
-                        "color": "#49658c",
+                        "backgroundColor": "#FFF",
+                        "borderColor": "#1D1F20",
+                        "borderRadius": 13,
+                        "borderWidth": 1,
                         "flex": 1,
                         "flexDirection": "row",
-                        "justifyContent": "center",
-                        "paddingBottom": 10,
-                        "paddingHorizontal": 11,
-                        "paddingTop": 10,
+                        "marginTop": 82,
+                        "minHeight": 82,
                         "zIndex": 993,
                       }
                     }
@@ -382,7 +376,9 @@ exports[`EditInventoryItem renders EditInventoryItem correctly 1`] = `
                             },
                           ]
                         }
-                      />
+                      >
+                        Price
+                      </Text>
                       <TextInput
                         keyboardType="number-pad"
                         onBlur={[Function]}
@@ -426,19 +422,15 @@ exports[`EditInventoryItem renders EditInventoryItem correctly 1`] = `
                   <View
                     style={
                       Object {
-                        "alignContent": "center",
                         "alignItems": "center",
-                        "backgroundColor": "#00000000",
-                        "borderColor": "#49658c",
-                        "borderRadius": 12,
-                        "borderWidth": 2,
-                        "color": "#49658c",
+                        "backgroundColor": "#FFF",
+                        "borderColor": "#1D1F20",
+                        "borderRadius": 13,
+                        "borderWidth": 1,
                         "flex": 1,
                         "flexDirection": "row",
-                        "justifyContent": "center",
-                        "paddingBottom": 10,
-                        "paddingHorizontal": 11,
-                        "paddingTop": 10,
+                        "marginTop": 82,
+                        "minHeight": 82,
                         "zIndex": 993,
                       }
                     }
@@ -477,7 +469,9 @@ exports[`EditInventoryItem renders EditInventoryItem correctly 1`] = `
                             },
                           ]
                         }
-                      />
+                      >
+                        Total
+                      </Text>
                       <TextInput
                         keyboardType="number-pad"
                         onBlur={[Function]}
@@ -521,19 +515,15 @@ exports[`EditInventoryItem renders EditInventoryItem correctly 1`] = `
                   <View
                     style={
                       Object {
-                        "alignContent": "center",
                         "alignItems": "center",
-                        "backgroundColor": "#00000000",
-                        "borderColor": "#49658c",
-                        "borderRadius": 12,
-                        "borderWidth": 2,
-                        "color": "#49658c",
+                        "backgroundColor": "#FFF",
+                        "borderColor": "#1D1F20",
+                        "borderRadius": 13,
+                        "borderWidth": 1,
                         "flex": 1,
                         "flexDirection": "row",
-                        "justifyContent": "center",
-                        "paddingBottom": 10,
-                        "paddingHorizontal": 11,
-                        "paddingTop": 10,
+                        "marginTop": 82,
+                        "minHeight": 82,
                         "zIndex": 993,
                       }
                     }
@@ -572,7 +562,9 @@ exports[`EditInventoryItem renders EditInventoryItem correctly 1`] = `
                             },
                           ]
                         }
-                      />
+                      >
+                        Description
+                      </Text>
                       <TextInput
                         numberOfLines={3}
                         onBlur={[Function]}
