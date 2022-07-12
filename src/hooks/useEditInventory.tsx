@@ -22,7 +22,9 @@ const useEditInventory = () => {
   const deleteEntry = () => {
     deleteUserInventoryItem(params);
     toggleModal();
-    navigation.goBack();
+    if (navigation.canGoBack()) {
+      navigation.goBack();
+    }
   };
 
   const formik = useFormik({
