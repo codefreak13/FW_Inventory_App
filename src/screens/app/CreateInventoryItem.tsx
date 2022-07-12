@@ -30,8 +30,9 @@ const CreateInventoryItem = () => {
         />
         <View style={styles.bodyStyle}>
           <Input
+            label="Name"
             value={values.name}
-            customstyle={styles.inputStyle}
+            containerStyles={styles.inputStyle}
             placeholder="Name"
             setValue={handleChange('name')}
             onBlur={handleBlur('name')}
@@ -42,8 +43,9 @@ const CreateInventoryItem = () => {
             </RegularText>
           ) : null}
           <Input
+            label="Price"
             value={values.price}
-            customstyle={styles.inputStyle}
+            containerStyles={styles.inputStyle}
             placeholder="Price"
             keyboardType={'number-pad'}
             setValue={handleChange('price')}
@@ -55,8 +57,9 @@ const CreateInventoryItem = () => {
             </RegularText>
           ) : null}
           <Input
+            label="Total"
             value={values.total}
-            customstyle={styles.inputStyle}
+            containerStyles={styles.inputStyle}
             placeholder="Total"
             keyboardType={'number-pad'}
             setValue={handleChange('total')}
@@ -68,8 +71,9 @@ const CreateInventoryItem = () => {
             </RegularText>
           ) : null}
           <Input
+            label="Description"
             value={values.description}
-            customstyle={styles.inputStyle}
+            containerStyles={styles.inputStyle}
             placeholder="Description"
             numberOfLines={3}
             setValue={handleChange('description')}
@@ -111,8 +115,10 @@ const styles = StyleSheet.create({
     marginHorizontal: hp(15),
   },
   inputStyle: {
-    borderWidth: hp(0.5),
+    borderWidth: hp(0.7),
     borderColor: COLORS.Black,
+    backgroundColor: COLORS.White,
+    borderRadius: hp(8),
     marginTop: hp(50),
   },
   titleStyle: {
@@ -131,6 +137,8 @@ const styles = StyleSheet.create({
   },
   addInventoryView: {
     flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   addInventoryText: {
     color: COLORS.White,

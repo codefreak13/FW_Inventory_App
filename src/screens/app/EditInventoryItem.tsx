@@ -1,6 +1,5 @@
 import React from 'react';
 import {Modal, Header} from '../../components';
-import {EditInventoryRouteProp} from '../../navigation/types';
 import {useEditInventory} from '../../hooks';
 import {View, StyleSheet} from 'react-native';
 import {Input, RegularText, Button} from '../../ui';
@@ -32,8 +31,9 @@ const EditInventoryItem = () => {
         />
         <View style={styles.bodyStyle}>
           <Input
+            label="Name"
             value={values.name}
-            customstyle={styles.inputStyle}
+            containerStyles={styles.inputStyle}
             placeholder="Name"
             setValue={handleChange('name')}
             onBlur={handleBlur('name')}
@@ -44,8 +44,9 @@ const EditInventoryItem = () => {
             </RegularText>
           ) : null}
           <Input
+            label="Price"
             value={values.price}
-            customstyle={styles.inputStyle}
+            containerStyles={styles.inputStyle}
             placeholder="Price"
             keyboardType={'number-pad'}
             setValue={handleChange('price')}
@@ -57,8 +58,9 @@ const EditInventoryItem = () => {
             </RegularText>
           ) : null}
           <Input
+            label="Total"
             value={values.total}
-            customstyle={styles.inputStyle}
+            containerStyles={styles.inputStyle}
             placeholder="Total"
             keyboardType={'number-pad'}
             setValue={handleChange('total')}
@@ -70,8 +72,9 @@ const EditInventoryItem = () => {
             </RegularText>
           ) : null}
           <Input
+            label="Description"
             value={values.description}
-            customstyle={styles.inputStyle}
+            containerStyles={styles.inputStyle}
             placeholder="Description"
             numberOfLines={3}
             setValue={handleChange('description')}
@@ -124,8 +127,10 @@ const styles = StyleSheet.create({
     marginHorizontal: hp(15),
   },
   inputStyle: {
-    borderWidth: hp(0.5),
+    borderWidth: hp(0.7),
     borderColor: COLORS.Black,
+    backgroundColor: COLORS.White,
+    borderRadius: hp(8),
     marginTop: hp(50),
   },
   titleStyle: {

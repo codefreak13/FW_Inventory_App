@@ -1,7 +1,7 @@
-import React from 'react';
-import {render, fireEvent, waitFor} from '@testing-library/react-native';
+import React, {useContext} from 'react';
+import {render, fireEvent, waitFor, act} from '@testing-library/react-native';
 import EditInventoryItem from './EditInventoryItem';
-import AppContextProvider from '../../store/Context';
+import AppContextProvider, {AppContext} from '../../store/Context';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {
@@ -14,7 +14,9 @@ import {useEditInventory} from '../../hooks';
 import {View} from 'react-native';
 import {Button} from '../../ui';
 
-const Stack = createNativeStackNavigator<InventoryStackParamList>();
+const Stack = createNativeStackNavigator<
+  InventoryStackParamList & {MOCK_COMPONENT: undefined}
+>();
 
 describe('EditInventoryItem', () => {
   it('renders EditInventoryItem correctly', () => {
@@ -95,5 +97,56 @@ describe('EditInventoryItem', () => {
     await waitFor(() => getByTestId('inventoryList'));
     fireEvent.press(getByTestId('inventoryList'));
     expect(() => getByText('EDIT INVENTORY')).toBeDefined();
+  });
+
+  it('CRUD operations works', async () => {
+    const MockComponent = () => {
+      const {deleteEntry} = useEditInventory();
+      const {addUserInventoryItem} = useContext(AppContext);
+
+      const inventoryItem = {
+        name: 'agbado',
+        price: '20',
+        total: '10',
+        description: 'agbado and cassava',
+      };
+
+      return (
+        <View>
+          <Button
+            onPress={() => addUserInventoryItem(inventoryItem)}
+            testID="addEntry"
+          />
+          <Button onPress={() => deleteEntry()} testID="deleteEntry" />
+        </View>
+      );
+    };
+
+    await AsyncStorage.setItem(
+      'ALL_USERS_DATA',
+      JSON.stringify({
+        'b@asf.acom': {
+          password: 'lsfsd',
+          inventory: [],
+        },
+      }),
+    );
+
+    // await AsyncStorage.setItem('USER_LOGGED_IN', 'b@asf.acom');
+
+    const {getByTestId} = render(
+      <AppContextProvider>
+        <NavigationContainer>
+          <Stack.Navigator
+            screenOptions={{headerShown: false}}
+            initialRouteName={'MOCK_COMPONENT'}>
+            <Stack.Screen name={'MOCK_COMPONENT'} component={MockComponent} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </AppContextProvider>,
+    );
+
+    fireEvent.press(getByTestId('addEntry'));
+    // await waitFor(() => expect(() => AsyncStorage.setItem).toBeCalled());
   });
 });

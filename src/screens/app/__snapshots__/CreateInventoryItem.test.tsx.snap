@@ -142,81 +142,385 @@ exports[`CreateInventoryItem renders CreateInventoryItem correctly 1`] = `
           }
         }
       >
-        <TextInput
-          onBlur={[Function]}
-          onChangeText={[Function]}
-          placeholder="Name"
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onLayout={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "minHeight": 82,
-              },
-              Object {
-                "borderColor": "#1D1F20",
-                "borderWidth": 1,
-                "marginTop": 82,
-              },
-            ]
+            Object {
+              "flexDirection": "row",
+              "flexGrow": 1,
+            }
           }
-          value=""
-        />
-        <TextInput
-          keyboardType="number-pad"
-          onBlur={[Function]}
-          onChangeText={[Function]}
-          placeholder="Price"
+        >
+          <View
+            style={
+              Object {
+                "alignContent": "center",
+                "alignItems": "center",
+                "backgroundColor": "#00000000",
+                "borderColor": "#49658c",
+                "borderRadius": 12,
+                "borderWidth": 2,
+                "color": "#49658c",
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "paddingBottom": 10,
+                "paddingHorizontal": 11,
+                "paddingTop": 10,
+                "zIndex": 993,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Text
+                onPress={[Function]}
+                style={
+                  Array [
+                    Object {
+                      "alignSelf": "center",
+                      "flex": 1,
+                      "position": "absolute",
+                      "zIndex": 999,
+                    },
+                    Object {
+                      "fontSize": 14,
+                      "transform": Array [
+                        Object {
+                          "translateX": 6,
+                        },
+                        Object {
+                          "translateY": 0,
+                        },
+                      ],
+                    },
+                    Object {
+                      "color": undefined,
+                    },
+                  ]
+                }
+              />
+              <TextInput
+                onBlur={[Function]}
+                onChangeText={[Function]}
+                onFocus={[Function]}
+                onSubmitEditing={[Function]}
+                placeholder=""
+                secureTextEntry={false}
+                style={
+                  Object {
+                    "color": "#000",
+                    "flex": 1,
+                    "minHeight": 28,
+                    "paddingVertical": 0,
+                    "zIndex": 997,
+                  }
+                }
+                value=""
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onLayout={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "minHeight": 82,
-              },
-              Object {
-                "borderColor": "#1D1F20",
-                "borderWidth": 1,
-                "marginTop": 82,
-              },
-            ]
+            Object {
+              "flexDirection": "row",
+              "flexGrow": 1,
+            }
           }
-          value=""
-        />
-        <TextInput
-          keyboardType="number-pad"
-          onBlur={[Function]}
-          onChangeText={[Function]}
-          placeholder="Total"
+        >
+          <View
+            style={
+              Object {
+                "alignContent": "center",
+                "alignItems": "center",
+                "backgroundColor": "#00000000",
+                "borderColor": "#49658c",
+                "borderRadius": 12,
+                "borderWidth": 2,
+                "color": "#49658c",
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "paddingBottom": 10,
+                "paddingHorizontal": 11,
+                "paddingTop": 10,
+                "zIndex": 993,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Text
+                onPress={[Function]}
+                style={
+                  Array [
+                    Object {
+                      "alignSelf": "center",
+                      "flex": 1,
+                      "position": "absolute",
+                      "zIndex": 999,
+                    },
+                    Object {
+                      "fontSize": 14,
+                      "transform": Array [
+                        Object {
+                          "translateX": 6,
+                        },
+                        Object {
+                          "translateY": 0,
+                        },
+                      ],
+                    },
+                    Object {
+                      "color": undefined,
+                    },
+                  ]
+                }
+              />
+              <TextInput
+                keyboardType="number-pad"
+                onBlur={[Function]}
+                onChangeText={[Function]}
+                onFocus={[Function]}
+                onSubmitEditing={[Function]}
+                placeholder=""
+                secureTextEntry={false}
+                style={
+                  Object {
+                    "color": "#000",
+                    "flex": 1,
+                    "minHeight": 28,
+                    "paddingVertical": 0,
+                    "zIndex": 997,
+                  }
+                }
+                value=""
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onLayout={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "minHeight": 82,
-              },
-              Object {
-                "borderColor": "#1D1F20",
-                "borderWidth": 1,
-                "marginTop": 82,
-              },
-            ]
+            Object {
+              "flexDirection": "row",
+              "flexGrow": 1,
+            }
           }
-          value=""
-        />
-        <TextInput
-          numberOfLines={3}
-          onBlur={[Function]}
-          onChangeText={[Function]}
-          placeholder="Description"
+        >
+          <View
+            style={
+              Object {
+                "alignContent": "center",
+                "alignItems": "center",
+                "backgroundColor": "#00000000",
+                "borderColor": "#49658c",
+                "borderRadius": 12,
+                "borderWidth": 2,
+                "color": "#49658c",
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "paddingBottom": 10,
+                "paddingHorizontal": 11,
+                "paddingTop": 10,
+                "zIndex": 993,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Text
+                onPress={[Function]}
+                style={
+                  Array [
+                    Object {
+                      "alignSelf": "center",
+                      "flex": 1,
+                      "position": "absolute",
+                      "zIndex": 999,
+                    },
+                    Object {
+                      "fontSize": 14,
+                      "transform": Array [
+                        Object {
+                          "translateX": 6,
+                        },
+                        Object {
+                          "translateY": 0,
+                        },
+                      ],
+                    },
+                    Object {
+                      "color": undefined,
+                    },
+                  ]
+                }
+              />
+              <TextInput
+                keyboardType="number-pad"
+                onBlur={[Function]}
+                onChangeText={[Function]}
+                onFocus={[Function]}
+                onSubmitEditing={[Function]}
+                placeholder=""
+                secureTextEntry={false}
+                style={
+                  Object {
+                    "color": "#000",
+                    "flex": 1,
+                    "minHeight": 28,
+                    "paddingVertical": 0,
+                    "zIndex": 997,
+                  }
+                }
+                value=""
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onLayout={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "minHeight": 82,
-              },
-              Object {
-                "borderColor": "#1D1F20",
-                "borderWidth": 1,
-                "marginTop": 82,
-              },
-            ]
+            Object {
+              "flexDirection": "row",
+              "flexGrow": 1,
+            }
           }
-          value=""
-        />
+        >
+          <View
+            style={
+              Object {
+                "alignContent": "center",
+                "alignItems": "center",
+                "backgroundColor": "#00000000",
+                "borderColor": "#49658c",
+                "borderRadius": 12,
+                "borderWidth": 2,
+                "color": "#49658c",
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "paddingBottom": 10,
+                "paddingHorizontal": 11,
+                "paddingTop": 10,
+                "zIndex": 993,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Text
+                onPress={[Function]}
+                style={
+                  Array [
+                    Object {
+                      "alignSelf": "center",
+                      "flex": 1,
+                      "position": "absolute",
+                      "zIndex": 999,
+                    },
+                    Object {
+                      "fontSize": 14,
+                      "transform": Array [
+                        Object {
+                          "translateX": 6,
+                        },
+                        Object {
+                          "translateY": 0,
+                        },
+                      ],
+                    },
+                    Object {
+                      "color": undefined,
+                    },
+                  ]
+                }
+              />
+              <TextInput
+                numberOfLines={3}
+                onBlur={[Function]}
+                onChangeText={[Function]}
+                onFocus={[Function]}
+                onSubmitEditing={[Function]}
+                placeholder=""
+                secureTextEntry={false}
+                style={
+                  Object {
+                    "color": "#000",
+                    "flex": 1,
+                    "minHeight": 28,
+                    "paddingVertical": 0,
+                    "zIndex": 997,
+                  }
+                }
+                value=""
+              />
+            </View>
+          </View>
+        </View>
       </View>
       <View
         accessible={true}
@@ -244,7 +548,9 @@ exports[`CreateInventoryItem renders CreateInventoryItem correctly 1`] = `
         <View
           style={
             Object {
+              "alignItems": "center",
               "flexDirection": "row",
+              "justifyContent": "center",
             }
           }
         >

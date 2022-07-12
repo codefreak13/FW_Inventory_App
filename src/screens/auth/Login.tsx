@@ -1,62 +1,48 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {View, StyleSheet} from 'react-native';
+import {useLogin} from '../../hooks';
 import {Input, RegularText, BoldText, Button} from '../../ui';
 import {COLORS, hp} from '../../utils/Utils';
-import {useFormik} from 'formik';
-import * as Yup from 'yup';
-import {AppContext} from '../../store/Context';
 
 const Login = () => {
-  const {LoginIfUserExists} = useContext(AppContext);
-
-  const formik = useFormik({
-    initialValues: {
-      email: '',
-      password: '',
-    },
-    validationSchema: Yup.object({
-      email: Yup.string().required('Email is required').email(),
-      password: Yup.string().required('Password is required'),
-    }),
-    onSubmit: values => {
-      LoginIfUserExists({
-        email: values.email.toLowerCase(),
-        password: values.password,
-      });
-    },
-  });
+  const {
+    formik: {values, handleChange, handleBlur, handleSubmit, errors, touched},
+  } = useLogin();
 
   return (
     <View style={styles.main}>
       <View style={styles.bodyStyle}>
         <Input
-          value={formik.values.email}
-          customstyle={styles.inputStyle}
-          placeholder="Email"
-          setValue={formik.handleChange('email')}
-          onBlur={formik.handleBlur('email')}
+          label="Email"
+          value={values.email}
+          containerStyles={styles.inputStyle}
+          setValue={handleChange('email')}
+          onBlur={handleBlur('email')}
+          staticLabel
         />
-        {formik.touched.email && formik.errors.email ? (
+        {touched.email && errors.email ? (
           <RegularText customstyle={styles.errorText}>
-            {formik.errors.email}
+            {errors.email}
           </RegularText>
         ) : null}
+        <View style={styles.spacing} />
         <Input
-          value={formik.values.password}
-          customstyle={styles.inputStyle}
-          placeholder="Password"
-          setValue={formik.handleChange('password')}
-          onBlur={formik.handleBlur('password')}
+          label="Password"
+          value={values.password}
+          setValue={handleChange('password')}
+          onBlur={handleBlur('password')}
+          containerStyles={styles.inputStyle}
+          staticLabel
         />
-        {formik.touched.password && formik.errors.password ? (
+        {touched.password && errors.password ? (
           <RegularText customstyle={styles.errorText}>
-            {formik.errors.password}
+            {errors.password}
           </RegularText>
         ) : null}
       </View>
       <Button
         onPress={() => {
-          formik.handleSubmit();
+          handleSubmit();
         }}
         customstyle={styles.addInventory}
         children={
@@ -79,9 +65,11 @@ const styles = StyleSheet.create({
     marginHorizontal: hp(15),
   },
   inputStyle: {
-    borderWidth: hp(0.5),
+    borderWidth: hp(0.7),
     borderColor: COLORS.Black,
-    marginTop: hp(50),
+    backgroundColor: COLORS.White,
+    borderRadius: hp(8),
+    marginTop: hp(30),
   },
   errorText: {
     color: COLORS.Danger,
@@ -96,5 +84,8 @@ const styles = StyleSheet.create({
   addInventoryText: {
     color: COLORS.White,
     paddingHorizontal: hp(30),
+  },
+  spacing: {
+    marginVertical: hp(30),
   },
 });

@@ -73,7 +73,6 @@ const useAppContext = () => {
     if (value) {
       setAllUsersData(JSON.parse(value));
     }
-
     setLoading(false);
   };
 

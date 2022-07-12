@@ -2,7 +2,7 @@ import React from 'react';
 import {View, FlatList, StyleSheet} from 'react-native';
 import {InventoryItemProps} from '../types';
 import {BoldText} from '../ui';
-import {hp} from '../utils/Utils';
+import {COLORS, hp} from '../utils/Utils';
 import Header from './Header';
 import InventoryListItem from './InventoryListItem';
 
@@ -23,7 +23,7 @@ const InventoryList = (props: InventoryListProps) => {
         showsVerticalScrollIndicator={false}
         ListEmptyComponent={
           <View style={styles.emptyListStyle}>
-            <BoldText>No Inventory</BoldText>
+            <BoldText customstyle={styles.emptyText}>No Inventory</BoldText>
           </View>
         }
         ListHeaderComponent={
@@ -60,6 +60,9 @@ const styles = StyleSheet.create({
   emptyListStyle: {
     alignItems: 'center',
     marginTop: hp(250),
+  },
+  emptyText: {
+    color: COLORS.Black,
   },
 });
 

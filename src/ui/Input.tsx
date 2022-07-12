@@ -2,14 +2,17 @@ import React from 'react';
 import {
   NativeSyntheticEvent,
   StyleSheet,
-  TextInput,
   TextInputFocusEventData,
   ViewStyle,
 } from 'react-native';
 import {hp} from '../utils/Utils';
+import {FloatingLabelInput} from 'react-native-floating-label-input';
 
 type InputProps = {
+  label: string;
+  staticLabel?: boolean;
   customstyle?: ViewStyle;
+  containerStyles?: ViewStyle;
   value?: string;
   setValue?: (x: string) => void;
   placeholder?: string;
@@ -29,6 +32,7 @@ type InputProps = {
 
 const Input = (Props: InputProps) => {
   const {
+    label,
     customstyle,
     value,
     setValue,
@@ -39,14 +43,18 @@ const Input = (Props: InputProps) => {
     editable,
     keyboardType,
     onBlur,
+    containerStyles,
+    staticLabel,
     ...rest
   } = Props;
 
   return (
-    <TextInput
+    <FloatingLabelInput
+      label={label}
       value={value}
+      staticLabel={staticLabel}
       onChangeText={text => setValue && setValue(text)}
-      style={[styles.input, customstyle]}
+      style={customstyle}
       placeholder={placeholder}
       numberOfLines={numberOfLines}
       multiline={multiline}
@@ -54,6 +62,7 @@ const Input = (Props: InputProps) => {
       editable={editable}
       keyboardType={keyboardType}
       onBlur={onBlur}
+      containerStyles={{...styles.input, ...containerStyles}}
       {...rest}
     />
   );

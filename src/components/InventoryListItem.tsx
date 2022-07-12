@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, Platform} from 'react-native';
 import {InventoryItemProps} from '../types';
-import {Button, BoldText, RegularText, Input, MediumText} from '../ui';
+import {Button, Input, MediumText} from '../ui';
 import {COLORS, hp} from '../utils/Utils';
 import FontAwesome from 'react-native-vector-icons/FontAwesome5';
 
@@ -19,11 +19,12 @@ const InventoryListItem = (props: InventoryListItemProps) => {
       testID="inventoryItem">
       <View style={styles.detailContainerStyle}>
         <View style={styles.rowView}>
-          <MediumText customstyle={{}}>{name}</MediumText>
-          <MediumText>{price}</MediumText>
-          <MediumText>{total}</MediumText>
+          <MediumText customstyle={styles.textStyle}>{name}</MediumText>
+          <MediumText customstyle={styles.textStyle}>{price}</MediumText>
+          <MediumText customstyle={styles.textStyle}>{total}</MediumText>
         </View>
         <Input
+          label=""
           value={description}
           multiline
           numberOfLines={2}
@@ -71,5 +72,8 @@ const styles = StyleSheet.create({
   },
   editIconStyle: {
     alignSelf: 'flex-end',
+  },
+  textStyle: {
+    color: COLORS.Black,
   },
 });

@@ -23,7 +23,7 @@ const Inventory = () => {
             middleIconStyle={styles.middleIconStyle}
             rightButton={{
               child: (
-                <FontAwesome name="ellipsis-v" size={16} color={COLORS.White} />
+                <FontAwesome name="ellipsis-h" size={16} color={COLORS.White} />
               ),
               onclick: () => toggleModal(),
             }}
@@ -87,6 +87,8 @@ const styles = StyleSheet.create({
   },
   addInventoryView: {
     flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   addInventoryText: {
     color: COLORS.White,
