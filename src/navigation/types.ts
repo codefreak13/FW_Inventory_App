@@ -1,7 +1,5 @@
-import {
-  NativeStackNavigationProp,
-  NativeStackScreenProps,
-} from '@react-navigation/native-stack';
+import {RouteProp} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {InventoryItemProps} from '../types';
 
 /// We use enums to prevent the use of strings across the application - i.e, write once
@@ -31,7 +29,7 @@ export type InventoryListScreenNavigationProp = NativeStackNavigationProp<
   INVENTORY_ROUTES.INVENTORY_LIST
 >;
 
-export type EditInventoryRouteProp = NativeStackScreenProps<
+export type EditInventoryRouteProp = RouteProp<
   InventoryStackParamList,
   INVENTORY_ROUTES.EDIT_INVENTORY_ITEM
 >;

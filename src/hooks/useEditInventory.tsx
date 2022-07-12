@@ -1,14 +1,14 @@
 import {useContext, useState} from 'react';
 import {useFormik} from 'formik';
-import * as Yup from 'yup';
 import {AppContext} from '../store/Context';
 import {EditInventoryRouteProp} from '../navigation/types';
+import {validationSchema} from '../utils/Utils';
+import {useRoute, useNavigation} from '@react-navigation/native';
 
-const useEditInventory = (props: EditInventoryRouteProp) => {
-  const {
-    navigation,
-    route: {params},
-  } = props;
+const useEditInventory = () => {
+  const route = useRoute<EditInventoryRouteProp>();
+  const {params} = route;
+  const navigation = useNavigation();
 
   const {editUserInventoryItem, deleteUserInventoryItem} =
     useContext(AppContext);
@@ -29,17 +29,9 @@ const useEditInventory = (props: EditInventoryRouteProp) => {
     initialValues: {
       ...params,
     },
-    validationSchema: Yup.object({
-      name: Yup.string().required('Please provide name'),
-      price: Yup.number().required('Please provide price'),
-      total: Yup.number().required('Please provide stock'),
-      description: Yup.string()
-        .matches(/\S+\s+\S+\s+\S+/, 'Must have atleast 3 words')
-        .required('Required'),
-    }),
+    validationSchema: validationSchema,
     onSubmit: values => {
-      editUserInventoryItem(params, values);
-      navigation.goBack();
+      editUserInventoryItem(params, values) && navigation.goBack();
     },
   });
 

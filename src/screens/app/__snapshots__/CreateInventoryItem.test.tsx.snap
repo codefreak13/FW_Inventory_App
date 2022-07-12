@@ -1,0 +1,591 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateInventoryItem renders CreateInventoryItem correctly 1`] = `
+<RCTScrollView
+  automaticallyAdjustContentInsets={false}
+  contentInset={
+    Object {
+      "bottom": 0,
+    }
+  }
+  enableAutomaticScroll={true}
+  enableOnAndroid={false}
+  enableResetScrollToCoords={true}
+  extraHeight={75}
+  extraScrollHeight={0}
+  getScrollResponder={[Function]}
+  handleOnScroll={[Function]}
+  keyboardDismissMode="interactive"
+  keyboardOpeningTime={250}
+  keyboardSpace={0}
+  onScroll={[Function]}
+  resetKeyboardSpace={[Function]}
+  scrollEventThrottle={1}
+  scrollForExtraHeightOnAndroid={[Function]}
+  scrollIntoView={[Function]}
+  scrollToEnd={[Function]}
+  scrollToFocusedInput={[Function]}
+  scrollToPosition={[Function]}
+  showsVerticalScrollIndicator={true}
+  update={[Function]}
+  viewIsInsideTabBar={false}
+>
+  <View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "height": 83.375,
+            },
+            null,
+            null,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "left": 15,
+              "position": "absolute",
+              "zIndex": 1,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#1D1F20",
+                    "fontSize": 16,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "FontAwesome5Free-Solid",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {
+                    "fontWeight": "900",
+                  },
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "bottom": 0,
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "fontFamily": "Roboto-Bold",
+                  "fontSize": 26.5,
+                  "fontWeight": "bold",
+                },
+                Object {
+                  "color": "#1D1F20",
+                  "fontSize": 29.5,
+                },
+              ]
+            }
+          >
+            Create Inventory
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "marginHorizontal": 24.5,
+            "marginTop": 33,
+          }
+        }
+      >
+        <TextInput
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          placeholder="Name"
+          style={
+            Array [
+              Object {
+                "minHeight": 82,
+              },
+              Object {
+                "borderColor": "#1D1F20",
+                "borderWidth": 1,
+                "marginTop": 82,
+              },
+            ]
+          }
+          value=""
+        />
+        <TextInput
+          keyboardType="number-pad"
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          placeholder="Price"
+          style={
+            Array [
+              Object {
+                "minHeight": 82,
+              },
+              Object {
+                "borderColor": "#1D1F20",
+                "borderWidth": 1,
+                "marginTop": 82,
+              },
+            ]
+          }
+          value=""
+        />
+        <TextInput
+          keyboardType="number-pad"
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          placeholder="Total"
+          style={
+            Array [
+              Object {
+                "minHeight": 82,
+              },
+              Object {
+                "borderColor": "#1D1F20",
+                "borderWidth": 1,
+                "marginTop": 82,
+              },
+            ]
+          }
+          value=""
+        />
+        <TextInput
+          numberOfLines={3}
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          placeholder="Description"
+          style={
+            Array [
+              Object {
+                "minHeight": 82,
+              },
+              Object {
+                "borderColor": "#1D1F20",
+                "borderWidth": 1,
+                "marginTop": 82,
+              },
+            ]
+          }
+          value=""
+        />
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "grey",
+            "borderRadius": 15,
+            "marginTop": 82,
+            "padding": 10,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            selectable={false}
+            style={
+              Array [
+                Object {
+                  "color": "#FFF",
+                  "fontSize": 16,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome5Free-Solid",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {
+                  "fontWeight": "900",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "fontFamily": "Roboto-Bold",
+                  "fontSize": 26.5,
+                  "fontWeight": "bold",
+                },
+                Object {
+                  "color": "#FFF",
+                  "paddingLeft": 10,
+                },
+              ]
+            }
+          >
+            Add Inventory
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`CreateInventoryItem renders correctly 1`] = `
+<RCTScrollView
+  automaticallyAdjustContentInsets={false}
+  contentInset={
+    Object {
+      "bottom": 0,
+    }
+  }
+  enableAutomaticScroll={true}
+  enableOnAndroid={false}
+  enableResetScrollToCoords={true}
+  extraHeight={75}
+  extraScrollHeight={0}
+  getScrollResponder={[Function]}
+  handleOnScroll={[Function]}
+  keyboardDismissMode="interactive"
+  keyboardOpeningTime={250}
+  keyboardSpace={0}
+  onScroll={[Function]}
+  resetKeyboardSpace={[Function]}
+  scrollEventThrottle={1}
+  scrollForExtraHeightOnAndroid={[Function]}
+  scrollIntoView={[Function]}
+  scrollToEnd={[Function]}
+  scrollToFocusedInput={[Function]}
+  scrollToPosition={[Function]}
+  showsVerticalScrollIndicator={true}
+  update={[Function]}
+  viewIsInsideTabBar={false}
+>
+  <View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "height": 83.375,
+            },
+            null,
+            null,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "left": 15,
+              "position": "absolute",
+              "zIndex": 1,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#1D1F20",
+                    "fontSize": 16,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "FontAwesome5Free-Solid",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {
+                    "fontWeight": "900",
+                  },
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "bottom": 0,
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "fontFamily": "Roboto-Bold",
+                  "fontSize": 26.5,
+                  "fontWeight": "bold",
+                },
+                Object {
+                  "color": "#1D1F20",
+                  "fontSize": 29.5,
+                },
+              ]
+            }
+          >
+            Create Inventory
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "marginHorizontal": 24.5,
+            "marginTop": 33,
+          }
+        }
+      >
+        <TextInput
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          placeholder="Name"
+          style={
+            Array [
+              Object {
+                "minHeight": 82,
+              },
+              Object {
+                "borderColor": "#1D1F20",
+                "borderWidth": 1,
+                "marginTop": 82,
+              },
+            ]
+          }
+          value=""
+        />
+        <TextInput
+          keyboardType="number-pad"
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          placeholder="Price"
+          style={
+            Array [
+              Object {
+                "minHeight": 82,
+              },
+              Object {
+                "borderColor": "#1D1F20",
+                "borderWidth": 1,
+                "marginTop": 82,
+              },
+            ]
+          }
+          value=""
+        />
+        <TextInput
+          keyboardType="number-pad"
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          placeholder="Total"
+          style={
+            Array [
+              Object {
+                "minHeight": 82,
+              },
+              Object {
+                "borderColor": "#1D1F20",
+                "borderWidth": 1,
+                "marginTop": 82,
+              },
+            ]
+          }
+          value=""
+        />
+        <TextInput
+          numberOfLines={3}
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          placeholder="Description"
+          style={
+            Array [
+              Object {
+                "minHeight": 82,
+              },
+              Object {
+                "borderColor": "#1D1F20",
+                "borderWidth": 1,
+                "marginTop": 82,
+              },
+            ]
+          }
+          value=""
+        />
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "grey",
+            "borderRadius": 15,
+            "marginTop": 82,
+            "padding": 10,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            selectable={false}
+            style={
+              Array [
+                Object {
+                  "color": "#FFF",
+                  "fontSize": 16,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome5Free-Solid",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {
+                  "fontWeight": "900",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "fontFamily": "Roboto-Bold",
+                  "fontSize": 26.5,
+                  "fontWeight": "bold",
+                },
+                Object {
+                  "color": "#FFF",
+                  "paddingLeft": 10,
+                },
+              ]
+            }
+          >
+            'Add Inventory'
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

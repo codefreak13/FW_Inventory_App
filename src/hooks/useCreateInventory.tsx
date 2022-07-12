@@ -1,15 +1,12 @@
 import {useContext, useState} from 'react';
 import {useFormik} from 'formik';
-import * as Yup from 'yup';
 import {AppContext} from '../store/Context';
 import {InventoryListScreenNavigationProp} from '../navigation/types';
+import {validationSchema} from '../utils/Utils';
+import {useNavigation} from '@react-navigation/native';
 
-type Props = {
-  navigation: InventoryListScreenNavigationProp;
-};
-
-const useCreateInventory = (props: Props) => {
-  const {navigation} = props;
+const useCreateInventory = () => {
+  const navigation = useNavigation<InventoryListScreenNavigationProp>();
 
   const {addUserInventoryItem, allUsersData, loggedInUser, logOut, loading} =
     useContext(AppContext);
@@ -26,17 +23,9 @@ const useCreateInventory = (props: Props) => {
       total: '',
       description: '',
     },
-    validationSchema: Yup.object({
-      name: Yup.string().required('Required'),
-      price: Yup.number().required('Required'),
-      total: Yup.number().required('Required'),
-      description: Yup.string()
-        .matches(/\S+\s+\S+\s+\S+/, 'Must have atleast 3 words')
-        .required('Required'),
-    }),
+    validationSchema: validationSchema,
     onSubmit: values => {
-      addUserInventoryItem(values);
-      navigation.goBack();
+      addUserInventoryItem(values) && navigation.goBack();
     },
   });
 

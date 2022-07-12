@@ -17,6 +17,8 @@ type ModalProps = {
   primaryText?: string;
   secondaryText?: string;
   buttonTextStyle?: TextStyle;
+  secondaryOnPressID?: string;
+  modalTestID?: string;
 };
 
 const FW_Modal = ({
@@ -32,9 +34,12 @@ const FW_Modal = ({
   primaryText,
   secondaryText,
   buttonTextStyle,
+  secondaryOnPressID,
+  modalTestID,
 }: ModalProps) => {
   return (
     <Modal
+      testID={modalTestID}
       isVisible={isVisible}
       hasBackdrop={true}
       style={{margin: 20}}
@@ -62,6 +67,7 @@ const FW_Modal = ({
             textStyle={{...buttonTextStyle, ...styles.buttonTextStyle}}
           />
           <Button
+            testID={secondaryOnPressID}
             onPress={secondaryOnPress}
             customstyle={{...styles.buttonStyle, ...buttonStyle}}
             title={secondaryText}
