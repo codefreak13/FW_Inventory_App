@@ -57,7 +57,9 @@ const FW_Modal = ({
       <View style={styles.main}>
         <BoldText customstyle={styles.header}>{title}</BoldText>
         <View style={[styles.body, bodyStyle]}>
-          <MediumText customstyle={bodyTextStyle}>{content}</MediumText>
+          <MediumText customstyle={{...styles.textStyle, ...bodyTextStyle}}>
+            {content}
+          </MediumText>
         </View>
         <View style={styles.buttonContainer}>
           <Button
@@ -97,6 +99,7 @@ const styles = StyleSheet.create({
   header: {
     textAlign: 'center',
     marginTop: hp(20),
+    color: COLORS.Black,
   },
   buttonContainer: {
     width: '90%',
@@ -112,5 +115,8 @@ const styles = StyleSheet.create({
   buttonTextStyle: {
     color: COLORS.White,
     alignSelf: 'center',
+  },
+  textStyle: {
+    color: COLORS.Black,
   },
 });
