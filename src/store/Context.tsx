@@ -1,23 +1,10 @@
-import React, {createContext, ProviderProps, ReactNode} from 'react';
-import {InventoryItemProps} from '../types';
+import React, {createContext, ProviderProps} from 'react';
+import {InventoryItemProps, AddUserProps, AllUsersDataProps} from '../types';
 import {useContextHook} from '../hooks';
 
-type Props = {
-  children: ReactNode;
-};
-
-interface addUserProps {
-  email: string;
-  password: string;
-}
-
-interface allUsersDataProps {
-  [key: string]: {password: string; inventory: InventoryItemProps[]};
-}
-
 export const AppContext = createContext<{
-  allUsersData: allUsersDataProps;
-  LoginIfUserExists: (a: addUserProps) => void;
+  allUsersData: AllUsersDataProps;
+  loginIfUserExists: (a: AddUserProps) => void;
   token: boolean;
   persistLoggedInUser: () => void;
   logOut: () => void;
@@ -31,7 +18,7 @@ export const AppContext = createContext<{
   loading: boolean;
 }>({
   allUsersData: {},
-  LoginIfUserExists: () => {},
+  loginIfUserExists: () => {},
   token: false,
   persistLoggedInUser: () => {},
   logOut: () => {},
@@ -50,7 +37,7 @@ const AppContextProvider = ({
     loading,
     token,
     allUsersData,
-    LoginIfUserExists,
+    loginIfUserExists,
     persistLoggedInUser,
     logOut,
     loggedInUser,
@@ -65,7 +52,7 @@ const AppContextProvider = ({
         loading,
         token,
         allUsersData,
-        LoginIfUserExists,
+        loginIfUserExists,
         persistLoggedInUser,
         logOut,
         loggedInUser,

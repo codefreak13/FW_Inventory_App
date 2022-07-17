@@ -4,7 +4,7 @@ import {useFormik} from 'formik';
 import * as Yup from 'yup';
 
 const useLogin = () => {
-  const {LoginIfUserExists} = useContext(AppContext);
+  const {loginIfUserExists} = useContext(AppContext);
 
   const formik = useFormik({
     initialValues: {
@@ -16,7 +16,7 @@ const useLogin = () => {
       password: Yup.string().required('Password is required'),
     }),
     onSubmit: values => {
-      LoginIfUserExists({
+      loginIfUserExists({
         email: values.email.toLowerCase(),
         password: values.password,
       });

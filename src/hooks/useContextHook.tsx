@@ -76,7 +76,7 @@ const useAppContext = () => {
   };
 
   //logs in an existing user
-  const LoginIfUserExists = async ({email, password}: AddUserProps) => {
+  const loginIfUserExists = async ({email, password}: AddUserProps) => {
     const allUsers = Object.keys(allUsersData);
     if (allUsers.includes(email) && password === allUsersData[email].password) {
       await saveLoggedInUser(email);
@@ -136,7 +136,7 @@ const useAppContext = () => {
     loading,
     token,
     allUsersData,
-    LoginIfUserExists,
+    loginIfUserExists,
     persistLoggedInUser,
     logOut,
     loggedInUser,
