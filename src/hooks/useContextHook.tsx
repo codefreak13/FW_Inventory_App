@@ -1,7 +1,12 @@
 import {useState, useEffect, useLayoutEffect} from 'react';
 import {Alert} from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
-import {InventoryItemProps, AddUserProps, AllUsersDataProps} from '../types';
+import {
+  InventoryItemProps,
+  AddUserProps,
+  AllUsersDataProps,
+  STORAGE_VALUES,
+} from '../types';
 
 const useAppContext = () => {
   const [allUsersData, setAllUsersData] = useState<AllUsersDataProps>({});
@@ -55,12 +60,15 @@ const useAppContext = () => {
 
   //Saves all user information
   const saveAllUsersData = async () => {
-    await AsyncStorage.setItem('ALL_USERS_DATA', JSON.stringify(allUsersData));
+    await AsyncStorage.setItem(
+      STORAGE_VALUES.ALL_USERS_DATA,
+      JSON.stringify(allUsersData),
+    );
   };
 
   //Getting all saved users and their data
   const getAllUsersData = async () => {
-    const value = await AsyncStorage.getItem('ALL_USERS_DATA');
+    const value = await AsyncStorage.getItem(STORAGE_VALUES.ALL_USERS_DATA);
     if (value) {
       setAllUsersData(JSON.parse(value));
     }
@@ -100,21 +108,21 @@ const useAppContext = () => {
 
   //logs out a user
   const logOut = async () => {
-    await AsyncStorage.removeItem('USER_LOGGED_IN');
+    await AsyncStorage.removeItem(STORAGE_VALUES.USER_LOGGED_IN);
     persistLoggedInUser();
     setLoggedInUser('');
   };
 
   //persists logged in user to Asynstorage
   const saveLoggedInUser = async (email: string) => {
-    await AsyncStorage.setItem('USER_LOGGED_IN', email);
+    await AsyncStorage.setItem(STORAGE_VALUES.USER_LOGGED_IN, email);
     await getLoggedInUser();
     setToken(true);
   };
 
   //gets the logged in user from Asynstorage
   const getLoggedInUser = async () => {
-    const value = await AsyncStorage.getItem('USER_LOGGED_IN');
+    const value = await AsyncStorage.getItem(STORAGE_VALUES.USER_LOGGED_IN);
 
     if (value) {
       setLoggedInUser(value);

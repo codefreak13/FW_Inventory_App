@@ -10,6 +10,7 @@ import {
 } from '../../navigation/types';
 import AsyncStorage from '@react-native-community/async-storage';
 import Inventory from './Inventory';
+import {STORAGE_VALUES} from '../../types';
 
 const Stack = createNativeStackNavigator<
   InventoryStackParamList & {MOCK_COMPONENT: undefined}
@@ -55,10 +56,10 @@ describe('EditInventoryItem', () => {
   });
 
   it('it navigates to edit screen when inventory item is pressed', async () => {
-    await AsyncStorage.setItem('USER_LOGGED_IN', 'b@asf.acom');
+    await AsyncStorage.setItem(STORAGE_VALUES.USER_LOGGED_IN, 'b@asf.acom');
 
     await AsyncStorage.setItem(
-      'ALL_USERS_DATA',
+      STORAGE_VALUES.ALL_USERS_DATA,
       JSON.stringify({
         'b@asf.acom': {
           password: 'lsfsd',

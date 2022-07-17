@@ -8,6 +8,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import {useEditInventory} from '../hooks';
 import {View, Text} from 'react-native';
 import {Button} from '../ui';
+import {STORAGE_VALUES} from '../types';
 
 const Stack = createNativeStackNavigator<
   InventoryStackParamList & {MOCK_COMPONENT: undefined}
@@ -58,7 +59,7 @@ describe('CRUD operations', () => {
   });
   it('creates an item (C)', async () => {
     await AsyncStorage.setItem(
-      'ALL_USERS_DATA',
+      STORAGE_VALUES.ALL_USERS_DATA,
       JSON.stringify({
         'b@asf.acom': {
           password: 'lsfsd',
@@ -67,7 +68,7 @@ describe('CRUD operations', () => {
       }),
     );
 
-    await AsyncStorage.setItem('USER_LOGGED_IN', 'b@asf.acom');
+    await AsyncStorage.setItem(STORAGE_VALUES.USER_LOGGED_IN, 'b@asf.acom');
 
     const {getByTestId} = render(
       <AppContextProvider>
@@ -88,9 +89,9 @@ describe('CRUD operations', () => {
   });
 
   it('reads an item (R)', async () => {
-    await AsyncStorage.setItem('USER_LOGGED_IN', 'b@asf.acom');
+    await AsyncStorage.setItem(STORAGE_VALUES.USER_LOGGED_IN, 'b@asf.acom');
     await AsyncStorage.setItem(
-      'ALL_USERS_DATA',
+      STORAGE_VALUES.ALL_USERS_DATA,
       JSON.stringify({
         'b@asf.acom': {
           password: 'lsfsd',
@@ -125,7 +126,7 @@ describe('CRUD operations', () => {
 
   it('updates an item (U)', async () => {
     await AsyncStorage.setItem(
-      'ALL_USERS_DATA',
+      STORAGE_VALUES.ALL_USERS_DATA,
       JSON.stringify({
         'b@asf.acom': {
           password: 'lsfsd',
@@ -134,7 +135,7 @@ describe('CRUD operations', () => {
       }),
     );
 
-    await AsyncStorage.setItem('USER_LOGGED_IN', 'b@asf.acom');
+    await AsyncStorage.setItem(STORAGE_VALUES.USER_LOGGED_IN, 'b@asf.acom');
 
     const {getByTestId, getByText} = render(
       <AppContextProvider>
@@ -159,7 +160,7 @@ describe('CRUD operations', () => {
 
   it('deletes an item (D)', async () => {
     await AsyncStorage.setItem(
-      'ALL_USERS_DATA',
+      STORAGE_VALUES.ALL_USERS_DATA,
       JSON.stringify({
         'b@asf.acom': {
           password: 'lsfsd',
@@ -168,7 +169,7 @@ describe('CRUD operations', () => {
       }),
     );
 
-    await AsyncStorage.setItem('USER_LOGGED_IN', 'b@asf.acom');
+    await AsyncStorage.setItem(STORAGE_VALUES.USER_LOGGED_IN, 'b@asf.acom');
 
     const {getByTestId} = render(
       <AppContextProvider>
@@ -186,7 +187,7 @@ describe('CRUD operations', () => {
     await waitFor(() => {});
     fireEvent.press(getByTestId('deleteEntry'));
     expect(AsyncStorage.setItem as any).toBeCalled();
-    const data = await AsyncStorage.getItem('ALL_USERS_DATA');
+    const data = await AsyncStorage.getItem(STORAGE_VALUES.ALL_USERS_DATA);
     let parsedData = null;
     if (data) {
       parsedData = JSON.parse(data);

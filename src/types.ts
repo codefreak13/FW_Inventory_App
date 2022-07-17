@@ -13,3 +13,8 @@ export interface AddUserProps {
 export interface AllUsersDataProps {
   [key: string]: {password: string; inventory: InventoryItemProps[]};
 }
+
+export const enum STORAGE_VALUES {
+  ALL_USERS_DATA = 'ALL_USERS_DATA',
+  USER_LOGGED_IN = 'USER_LOGGED_IN',
+}
