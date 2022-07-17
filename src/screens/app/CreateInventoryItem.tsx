@@ -1,5 +1,4 @@
 import React from 'react';
-import {InventoryListScreenNavigationProp} from '../../navigation/types';
 import {useCreateInventory} from '../../hooks';
 import {View, StyleSheet} from 'react-native';
 import {Header} from '../../components';

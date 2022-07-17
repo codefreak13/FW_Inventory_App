@@ -12,6 +12,7 @@ const useCreateInventory = () => {
     useContext(AppContext);
 
   const [modalVisible, setModalVisible] = useState(false);
+
   const toggleModal = () => {
     setModalVisible(!modalVisible);
   };

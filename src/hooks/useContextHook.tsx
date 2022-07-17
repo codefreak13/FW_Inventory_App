@@ -1,19 +1,10 @@
 import {useState, useEffect, useLayoutEffect} from 'react';
 import {Alert} from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
-import {InventoryItemProps} from '../types';
-
-interface addUserProps {
-  email: string;
-  password: string;
-}
-
-interface allUsersDataProps {
-  [key: string]: {password: string; inventory: InventoryItemProps[]};
-}
+import {InventoryItemProps, AddUserProps, AllUsersDataProps} from '../types';
 
 const useAppContext = () => {
-  const [allUsersData, setAllUsersData] = useState<allUsersDataProps>({});
+  const [allUsersData, setAllUsersData] = useState<AllUsersDataProps>({});
   const [token, setToken] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
   const [loggedInUser, setLoggedInUser] = useState<string>('');
@@ -77,7 +68,7 @@ const useAppContext = () => {
   };
 
   //adds a new user
-  const addUser = async ({email, password}: addUserProps) => {
+  const addUser = async ({email, password}: AddUserProps) => {
     const user = {[email]: {password, inventory: []}};
     const newData = {...allUsersData, ...user};
     setAllUsersData(newData);
@@ -85,10 +76,18 @@ const useAppContext = () => {
   };
 
   //logs in an existing user
-  const LoginIfUserExists = async ({email, password}: addUserProps) => {
+  const LoginIfUserExists = async ({email, password}: AddUserProps) => {
     const allUsers = Object.keys(allUsersData);
     if (allUsers.includes(email) && password === allUsersData[email].password) {
       await saveLoggedInUser(email);
+    } else if (
+      allUsers.includes(email) &&
+      password !== allUsersData[email].password
+    ) {
+      Alert.alert(
+        'Ooops!',
+        'This user name already exists.\nLogin with the password you signed up with.',
+      );
     } else {
       addUser({email, password});
     }
