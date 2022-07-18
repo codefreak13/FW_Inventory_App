@@ -1,0 +1,240 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateInventoryItem renders CreateInventoryItem correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "marginHorizontal": 24.5,
+        "marginTop": 33,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onLayout={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "flexDirection": "row",
+          "flexGrow": 1,
+        }
+      }
+    >
+      <Text
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "alignSelf": "center",
+              "flex": 1,
+              "position": "absolute",
+              "zIndex": 999,
+            },
+            Object {
+              "color": undefined,
+            },
+            Object {
+              "left": 20,
+              "top": -5,
+            },
+          ]
+        }
+      >
+        Email
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFF",
+            "borderColor": "#1D1F20",
+            "borderRadius": 13,
+            "borderWidth": 1,
+            "flex": 1,
+            "flexDirection": "row",
+            "marginTop": 49.5,
+            "minHeight": 82,
+            "zIndex": 993,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <TextInput
+            onBlur={[Function]}
+            onChangeText={[Function]}
+            onFocus={[Function]}
+            onSubmitEditing={[Function]}
+            placeholder=""
+            secureTextEntry={false}
+            style={
+              Object {
+                "color": "#000",
+                "flex": 1,
+                "minHeight": 28,
+                "paddingVertical": 0,
+                "zIndex": 997,
+              }
+            }
+            value=""
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginVertical": 49.5,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onLayout={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "flexDirection": "row",
+          "flexGrow": 1,
+        }
+      }
+    >
+      <Text
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "alignSelf": "center",
+              "flex": 1,
+              "position": "absolute",
+              "zIndex": 999,
+            },
+            Object {
+              "color": undefined,
+            },
+            Object {
+              "left": 20,
+              "top": -5,
+            },
+          ]
+        }
+      >
+        Password
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFF",
+            "borderColor": "#1D1F20",
+            "borderRadius": 13,
+            "borderWidth": 1,
+            "flex": 1,
+            "flexDirection": "row",
+            "marginTop": 49.5,
+            "minHeight": 82,
+            "zIndex": 993,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <TextInput
+            onBlur={[Function]}
+            onChangeText={[Function]}
+            onFocus={[Function]}
+            onSubmitEditing={[Function]}
+            placeholder=""
+            secureTextEntry={false}
+            style={
+              Object {
+                "color": "#000",
+                "flex": 1,
+                "minHeight": 28,
+                "paddingVertical": 0,
+                "zIndex": 997,
+              }
+            }
+            value=""
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignSelf": "center",
+        "backgroundColor": "grey",
+        "borderRadius": 15,
+        "marginTop": 82,
+        "padding": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontFamily": "Roboto-Bold",
+            "fontSize": 26.5,
+            "fontWeight": "bold",
+          },
+          Object {
+            "color": "#FFF",
+            "paddingHorizontal": 49.5,
+          },
+        ]
+      }
+    >
+      Login
+    </Text>
+  </View>
+</View>
+`;
